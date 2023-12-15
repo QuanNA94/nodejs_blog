@@ -1,10 +1,12 @@
+{{! Form default behavior }}
 <div class="mt-4">
-  <form method="post">
 
+ {{!-- method: submit với phương thức nào, action: submit ở URL nào --}}
+  <form method="GET" action="/news">
     <div class="form-group">
       <label for="search-input">Key Search </label>
-      {{!-- <input name="fullname" type="text" />
-      <input name="age" type="number" /> --}}
+      {{! <input name="fullname" type="text" />
+      <input name="age" type="number" /> }}
 
       <input
         name="q"

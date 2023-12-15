@@ -29,6 +29,9 @@ app.get("/", (req, res) => {
 });
 
 app.get("/news", (req, res) => {
+  console.log(
+    "khi submit nó move sang trang news này, kèm theo parameters /news?q=move+to+news"
+  );
   res.render("news");
 });
 
