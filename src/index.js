@@ -8,6 +8,10 @@ const app = express();
 const port = 8080;
 
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded({ extended: true })); // dạng form html thì có cái này để xử lý
+app.use(express.json()); // code từ js lên thì có cái này để xử lý
+
+// XMLHttpRequest,
 
 // HTTP logger
 // app.use(morgan("combined"));
@@ -41,8 +45,8 @@ app.get("/search", (req, res) => {
 });
 
 app.post("/search", (req, res) => {
-  // console.log("req.query :>> ", req.query.q);
-  res.render("search");
+  console.log(req.body);
+  res.send("");
 });
 
 app.listen(port, () =>

@@ -1,0 +1,11 @@
+[GET method] nhận dữ liệu từ phía server về phía client, muốn nhận dữ liệu từ phía máy chủ về phía người sử dụng
+[POST method] gửi dữ liệu từ phía client về server
+
+GET: khi gửi dữ liệu thì thông tin client sẽ đính lên URL bằng dấu ? and &
+=> trong khi gửi dữ liệu chứa những dữ liệu nhạy cảm, nên k sử dụng GET để gửi dữ liệu
+=> sinh ra giải pháp dùng --POST: khi gửi dữ liệu sẽ không đính lên URL nữa, dữ liệu sẽ được gửi ngầm đi
+
+EX: form login/logout
+
++ client gửi qua [query parameters] thì dùng [req.query]
++ client gửi qua [form-data] dùng [req.body]

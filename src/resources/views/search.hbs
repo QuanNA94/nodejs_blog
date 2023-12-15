@@ -1,8 +1,8 @@
 {{! Form default behavior }}
 <div class="mt-4">
 
- {{!-- method: submit với phương thức nào, action: submit ở URL nào --}}
-  <form method="GET" action="/news">
+  {{! method: submit với phương thức nào, action: submit ở URL nào }}
+  <form method="POST" action="">
     <div class="form-group">
       <label for="search-input">Key Search </label>
       {{! <input name="fullname" type="text" />
@@ -15,7 +15,17 @@
         id="search-input"
         placeholder="Enter Key Search ..."
       />
+    </div>
 
+    <div class="form-group">
+      <label for="gender-input">Key Search </label>
+
+      {{! thẻ select có name="gender" thì nó cũng có thể submit đi được }}
+      <select name="gender" type="text" class="form-control" id="gender-input">
+        <option value="">-- Chọn giới tính---</option>
+        <option value="male">Nam</option>
+        <option value="female">Nữ</option>
+      </select>
     </div>
 
     <button type="submit" class="btn btn-primary">Search</button>
