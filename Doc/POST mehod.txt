@@ -9,3 +9,12 @@ EX: form login/logout
 
 + client gửi qua [query parameters] thì dùng [req.query]
 + client gửi qua [form-data] dùng [req.body]
+
+[Flow]
+
+[src/index.js] : route(app) // truyền express vào route
+[routes/index.js] : nhận được express 
+    + app.use('/news', newsRouter) sử dụng path, truyền router vào đây
+    + newsRouter đã được export ra router in [routes/news.js], nơi cấu hình nhiều path cho news
+    => truy cập vào ("/news", nó sẽ chọc vào newsRouter)
+    [routes/news.js] có router.use('/' tuyến đường trống) nó sẽ hiểu là tuyến đường chọc vào đầu tiên
